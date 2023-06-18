@@ -73,7 +73,7 @@ function Attendees() {
                 w-[330px]  h-[172px] flex justify-between pl-[1rem] pt-[1rem] 
                 border-2 mt-[1.5rem] border-[#4d4d4d10]  pr-[1rem] shadow-sm pb-[1rem] 
                 rounded-[.5rem] 
-                md:w-[349px] lg:w-[90%]    
+                md:w-[349px] lg:w-[500px]    
                     px-[.6rem] py-[.6rem]
                   mx-auto  
                 "
@@ -117,12 +117,8 @@ function Attendees() {
                   </div>
                 </div>
 
-                <div className="w-[45%] ml-[5px] lg:pl-[11rem]">
-                  <img
-                    src={item.image}
-                    alt="eventimage"
-                    class="lg:w-[50%] lg:mt-[-.8rem]"
-                  />
+                <div className="w-[45%] ml-[5px] lg:pl-[6rem]">
+                  <img src={item.image} alt="eventimage" />
                 </div>
               </div>
             );
@@ -150,7 +146,7 @@ function Attendees() {
                     className="w-[330px] ml-[1rem] h-[172px]  flex justify-between pl-[1rem] pt-[1rem] 
                 border-2 mt-[1.5rem] border-[#4d4d4d10]  pr-[1rem] shadow-sm pb-[1rem] 
                 rounded-[.5rem] 
-                md:w-[349px] lg:w-[90%]   
+                md:w-[349px] lg:w-[500px]   
                 -2      px-[.6rem] py-[.6rem]
                  mx-auto  "
                     key={item.id}
@@ -189,12 +185,8 @@ function Attendees() {
                       </div>
                     </div>
 
-                    <div className="w-[45%]  pl-[1.5rem] lg:pl-[11rem]">
-                      <img
-                        src={item.image}
-                        alt="eventimage"
-                        class="lg:w-[50%] lg:mt-[-.8rem]"
-                      />
+                    <div className="w-[45%]  pl-[1.5rem] lg:pl-[6rem]">
+                      <img src={item.image} alt="eventimage" />
                     </div>
                   </div>
                 </div>

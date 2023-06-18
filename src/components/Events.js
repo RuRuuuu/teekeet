@@ -76,16 +76,16 @@ function Events() {
           </div>
         </div>
 
-        <h2 className="text-[24px] font-bold mt-[1.5rem] lg:mt-[2.5rem]">
+        <h2 className="text-[24px] font-bold mt-[1.5rem] lg:mt-[3rem] lg:text-center">
           Upcoming Event
         </h2>
 
         {newSerch.map(function (item) {
           return (
             <div
-              className="w-[349px] lg:mx-auto lg:w-[500px] md:mx-auto flex  justify-between
-                border-2 mt-[1.4rem]  border-[#4d4d4d10] px-[.6rem] py-[.6rem]
-                rounded-[.5rem]"
+              className="w-[349px] lg:mx-auto lg:w-[500px]
+               md:mx-auto flex justify-between border-2 mt-[1.4rem]   
+               border-[#4d4d4d10] px-[.6rem] py-[.6rem] rounded-[.5rem]"
               key={item.id}
             >
               <div className="w-[50%] py-[.7rem] ">
@@ -130,7 +130,7 @@ function Events() {
           <button
             type="button"
             onClick={handleButtonClick}
-            className=" w-[343px] bg-[#E1E4EB] text-center rounded-xl h-[60px] mt-[1.5rem] lg:w-[60%]"
+            className=" w-[343px] bg-[#E1E4EB] text-center rounded-xl h-[60px] mt-[1.5rem] lg:w-[45%]"
           >
             Discover more
           </button>
@@ -139,7 +139,7 @@ function Events() {
         {showHiddenObjects
           ? remainEvents.map((item) => (
               <div>
-                <h2 className="text-[24px] font-bold mt-[1.5rem]">
+                <h2 className="text-[24px] font-bold mt-[1.5rem] lg:text-center">
                   {item.heading}
                 </h2>
                 <div
