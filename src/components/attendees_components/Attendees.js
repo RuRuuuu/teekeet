@@ -40,8 +40,8 @@ function Attendees() {
   return (
     <>
       <div className="overflow-hidden md:flex md:flex-col md:justify-center md:items-center">
-        <main className="pl-[1rem]  overflow-hidden">
-          <h1 className="mt-[1.5rem] mb-[1rem] font-bold overflow-hidden text-4xl md: text-4xl font-bold  text-center">
+        <main className="pl-[1rem] pr-[1rem] w-full  overflow-hidden">
+          <h1 className="mt-[1.5rem] mb-[1rem] font-bold overflow-hidden text-4xl md:text-center">
             Book your Events with{" "}
             <span style={{ color: "#0765f8" }}>Teeket</span>
           </h1>
@@ -70,12 +70,12 @@ function Attendees() {
             return (
               <div
                 className="
-                w-[330px] ml-[1rem] h-[172px] flex justify-between pl-[1rem] pt-[1rem] 
+                w-[330px]  h-[172px] flex justify-between pl-[1rem] pt-[1rem] 
                 border-2 mt-[1.5rem] border-[#4d4d4d10]  pr-[1rem] shadow-sm pb-[1rem] 
-                rounded-[.5rem] pl-[10px]
-                md:w-[349px] lg:w-[90%] h-[172px] flex justify-between 
-                border-2 mt-[1.4rem]  border-[#4d4d4d10]   shadow-sm  px-[.6rem] py-[.6rem]
-                rounded-[.5rem]  mx-auto  pl-[20px]
+                rounded-[.5rem] 
+                md:w-[349px] lg:w-[90%]    
+                    px-[.6rem] py-[.6rem]
+                  mx-auto  
                 "
                 key={item.id}
               >
@@ -102,33 +102,39 @@ function Attendees() {
                       alt="eventcreator"
                       style={{ width: "40px", height: "40px" }}
                     />
-                    <p className="text-[12px] w-[20rem]  ml-[.4rem] mt-[1rem]">
+                    <p className="text-[14px] w-[20rem]  ml-[.4rem] lg:text-[16px] ">
                       {item.name}
                     </p>
                   </div>
 
-                  <div className="flex mt-[0.1rem] md:mt-[0.8rem]">
+                  <div className="flex">
                     <img
                       src={item.mapline}
                       alt="mapline"
                       style={{ width: "20px", height: "20px" }}
                     />
-                    <span>{item.location}</span>
+                    <span class="text-[12px]">{item.location}</span>
                   </div>
                 </div>
 
                 <div className="w-[45%] ml-[5px] lg:pl-[11rem]">
-                  <img src={item.image} alt="eventimage" class="lg:w-[100%]" />
+                  <img
+                    src={item.image}
+                    alt="eventimage"
+                    class="lg:w-[50%] lg:mt-[-.8rem]"
+                  />
                 </div>
               </div>
             );
           })}
 
-          <div className=" ml-[1rem]">
+          <div className="  mx-auto text-center">
             <button
               type="button"
               onClick={handleButtonClick}
-              className="w-[300px] bg-[#0052f6] text-[#FFFFFF] rounded-[18px]font-bold rounded-full border border-grey-500  text-center h-[60px] mt-[1.6rem] text-xl md:flex  md:justify-center md:items-center md:ml-[15rem]"
+              className="w-[300px] bg-[#0052f6] text-[#FFFFFF] rounded-[18px]font-bold rounded-full 
+              border border-grey-500  text-center h-[60px] mt-[1.6rem] 
+              text-xl mx-auto "
             >
               Discover more
             </button>
@@ -141,12 +147,12 @@ function Attendees() {
                     {item.heading}
                   </h2>
                   <div
-                    className="w-[330px] ml-[1rem] h-[172px] flex justify-between pl-[1rem] pt-[1rem] 
+                    className="w-[330px] ml-[1rem] h-[172px]  flex justify-between pl-[1rem] pt-[1rem] 
                 border-2 mt-[1.5rem] border-[#4d4d4d10]  pr-[1rem] shadow-sm pb-[1rem] 
-                rounded-[.5rem] pl-[10px]
-                md:w-[349px] lg:w-[90%] h-[172px] flex justify-between 
-                border-2 mt-[1.4rem]  border-[#4d4d4d10]   shadow-sm  px-[.6rem] py-[.6rem]
-                rounded-[.5rem]  mx-auto  pl-[20px]"
+                rounded-[.5rem] 
+                md:w-[349px] lg:w-[90%]   
+                -2      px-[.6rem] py-[.6rem]
+                 mx-auto  "
                     key={item.id}
                   >
                     <div className="w-[50%]">
@@ -172,14 +178,14 @@ function Attendees() {
                           alt="eventcreator"
                           style={{ width: "40px", height: "40px" }}
                         />
-                        <p className="text-[12px] w-[20rem]  ml-[.4rem]  mt-[0.8rem]">
+                        <p className="text-[14px] w-[20rem]  ml-[.4rem]  lg:text-[16px] mt-[0.8rem]">
                           {item.name}
                         </p>
                       </div>
 
-                      <div className="flex mt-[0.5rem] md:mt-[0.8rem]">
+                      <div className="flex">
                         <img src={item.mapline} alt="mapline" />
-                        <span>{item.location}</span>
+                        <span class="text-[12px]">{item.location}</span>
                       </div>
                     </div>
 
@@ -187,7 +193,7 @@ function Attendees() {
                       <img
                         src={item.image}
                         alt="eventimage"
-                        class="lg:w-[100%]"
+                        class="lg:w-[50%] lg:mt-[-.8rem]"
                       />
                     </div>
                   </div>
@@ -199,7 +205,7 @@ function Attendees() {
             More than 1000+ leading event companies choose Teeket
           </p>
 
-          <div className="flex mb-[0.5rem] justify-center -ml-[3px] md:flex mb-[0.5rem] flex flex-row justify-center items-center ml-[1.5rem]">
+          <div className="flex mb-[0.5rem] justify-center -ml-[3px] md:flex   flex-row items-center ">
             <img className="w-20 md:" src={sponsor_one} alt="testimonial" />
             <img className="w-20 md:" src={sponsor_two} alt="testimonial" />
             <img
@@ -208,7 +214,7 @@ function Attendees() {
               alt="mavintestimonial"
             />
           </div>
-          <div className="flex mb-[0.5rem] justify-center -ml-[3px] md:flex mb-[0.5rem] flex flex-row justify-center items-center ml-[1.5rem]">
+          <div className="flex mb-[0.5rem] justify-center -ml-[3px] md:flex  flex-row r items-center ">
             <img className=" w-20 md: " src={sponsor_four} alt="testimonial" />
             <img
               className="w-30 mr-[5px] md:"

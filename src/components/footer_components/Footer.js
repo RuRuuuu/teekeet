@@ -20,7 +20,7 @@ function Footer() {
   return (
     <div classNameName="overflow-hidden">
       <main
-        className="w-full h-[1000px] bg-[#110011]
+        className="w-full h-[950px] bg-[#110011]
       mt-[2rem] pt-[3rem]"
       >
         <div
@@ -100,7 +100,7 @@ function Footer() {
           </button>
         </div>
 
-        <div className="lg:mx-[4rem] ml-[2.5rem] ">
+        <div className="lg:mx-[4rem] ml-[2.5rem] mr-[2.5rem] ">
           <div>
             <div className="mt-[1.8rem] lg:mt-[2.5rem]">
               <span className="text-[#989898] text-[12px] font-medium">
@@ -108,7 +108,7 @@ function Footer() {
               </span>
             </div>
 
-            <div className="flex  mt-[1rem] mb-[.7rem]">
+            <div className="flex  mt-[1rem] mb-[.5rem]">
               <h3 className="font-semibold text-[14px] text-[#FFFFFF]">
                 For Organizers
               </h3>
@@ -125,10 +125,10 @@ function Footer() {
             {isDropdownOpen && (
               <div className=" pt-[.8rem]">
                 {/* <a href="/trending-events"></a> */}
-                <p className="text-[#D2D2D2] mb-[.7rem] text-[14px] font-light">
+                <p className="text-[#D2D2D2] mb-[.4rem] text-[14px] font-light">
                   How to create events
                 </p>
-                <p className="text-[#D2D2D2] text-[14px] mt-[.7rem] mb-[.6rem] font-light">
+                <p className="text-[#D2D2D2] text-[14px] mt-[.6rem] mb-[.3rem] font-light">
                   Event FAQs.
                 </p>
                 <p className="text-[#D2D2D2] text-[14px] font-light ">
@@ -143,7 +143,7 @@ function Footer() {
             )}
           </div>
 
-          <div className=" w-full bg-[#585858c0] h-[.2px] mt-[2rem] text-center"></div>
+          <div className=" w-full bg-[#585858c0] h-[.2px]  mx-auto"></div>
 
           <div className="mt-[2rem]">
             <div className="flex">
