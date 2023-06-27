@@ -13,17 +13,18 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import "./login.css";
 
 function Login() {
   const loginValidate = yup.object({
     email: yup
       .string()
-      .email("Invalid email")
-      .required("Your email is required"),
+      .required("Email is required")
+      .email("Email must be a valid address"),
     password: yup
       .string()
       .required("Password is required")
-      .min(3, "Must be at least 3 characters long"),
+      .min(8, "Password characters must be 8 characters long"),
   });
 
   const navigate = useNavigate();
@@ -48,7 +49,6 @@ function Login() {
       [e.target.id]: e.target.value,
     }));
   };
-
   const onSubmit = async () => {
     try {
       const auth = getAuth();
@@ -111,7 +111,7 @@ function Login() {
         <button
           type="button"
           className="lg:w-[40rem] lg:flex lg:justify-center lg:items-center bg-[#FFFFFF] py-3 px-16 text-[#1F1F1F] text-base font-bold flex flex-row rounded-xl border border-grey-500"
-          onClick={onGoogleClick}
+          onClick={() => onGoogleClick}
         >
           <img src={google} alt="google-logo" className="px-3" />
           Continue with Google
@@ -129,40 +129,36 @@ function Login() {
       {/* option 2: sign in via email and password */}
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
-          <input
-            type="email"
-            className="lg:w-[40rem] lg:text-center w-[350px] form-input py-3 px-6 rounded-xl my-4 bg-[#EDEDED] border border-gray-300"
-            placeholder="Enter your email address"
-            id="email"
-            name="email"
-            value={email}
-            {...register("email")}
-            onChange={onChange}
-          />
-          {
-            <p style={{ color: "red", fontSize: "16px" }}>
-              {errors.email?.message}
-            </p>
-          }
+          <div className="form-row">
+            <input
+              htmlFor="email"
+              className="lg:w-[40rem] lg:text-center w-[350px] form-input py-3 px-6 rounded-xl my-2 bg-[#EDEDED] border border-gray-300"
+              placeholder="Enter your email address"
+              id="email"
+              name="email"
+              value={email}
+              {...register("email")}
+              onChange={onChange}
+            />
+            <span className="error"> {errors.email?.message}</span>
+          </div>
         </section>
         <section>
-          <input
-            type="password"
-            className="lg:w-[40rem] lg:text-center w-[350px] form-input py-3 px-6 rounded-xl bg-[#EDEDED] border border-gray-300"
-            placeholder="Enter your password"
-            id="password"
-            name="password"
-            value={password}
-            {...register("password")}
-            onChange={onChange}
-            minLength="8"
-            autoComplete="on"
-          />
-          {
-            <p style={{ color: "red", fontSize: "16px" }}>
-              {errors.email?.message}
-            </p>
-          }
+          <div className="form-row">
+            <input
+              htmlFor="password"
+              type="password"
+              className="lg:w-[40rem] lg:text-center w-[350px] form-input py-3 px-6 rounded-xl bg-[#EDEDED] border border-gray-300"
+              placeholder="Enter your password"
+              id="password"
+              name="password"
+              value={password}
+              {...register("password")}
+              onChange={onChange}
+              autoComplete="on"
+            />
+            <span className="error"> {errors.password?.message}</span>
+          </div>
         </section>
         <button
           type="submit"
