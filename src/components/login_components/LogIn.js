@@ -111,7 +111,7 @@ function Login() {
         <button
           type="button"
           className="lg:w-[40rem] lg:flex lg:justify-center lg:items-center bg-[#FFFFFF] py-3 px-16 text-[#1F1F1F] text-base font-bold flex flex-row rounded-xl border border-grey-500"
-          onClick={() => onGoogleClick}
+          onClick={onGoogleClick}
         >
           <img src={google} alt="google-logo" className="px-3" />
           Continue with Google
